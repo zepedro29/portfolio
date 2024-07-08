@@ -1,5 +1,5 @@
 import { HERO_CONTENT } from "../constants"
-import profilePic from "../assets/JPperfil.png"
+import profilePic from "../assets/hero2.png"
 import { motion } from "framer-motion"
 
 const container = (delay) => ({
@@ -13,7 +13,7 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-  <div className="border-b border-neutral-300 pb-4 lg:mb-35 mt-28">
+  <div id="hero" className="border-b border-neutral-300 pb-10 lg:mb-35 mt-28">
     <div className="flex flex-wrap">
 
         <div className="w-full lg:w-1/2">
@@ -31,14 +31,16 @@ const Hero = () => {
                 animate="visible" 
                 className="bg-gradient-to-r from-blue-500 via-slate-500
                 to-purple-500 bg-clip-text text-4xl tracking-light text-transparent">
-                Information systems engineer
+                Information Systems Engineer
                 </motion.span>
                 <motion.p 
                 variants={container(1)}
                 initial="hidden"
                 animate="visible"
-                className="my-2 max-w-xl py-6 font-light tracking-tighter">
-                    {HERO_CONTENT}
+                className="my-2 max-w-xl py-6 font-light tracking-tighter text-justify">
+                    {HERO_CONTENT.p1}
+                    <br />
+                    {HERO_CONTENT.p2}
                 </motion.p>
             </div>
         </div>

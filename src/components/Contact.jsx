@@ -1,12 +1,33 @@
 import { CONTACT } from "../constants"
-import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { FaEnvelope, FaPhoneAlt, FaArrowUp } from 'react-icons/fa';
 import {motion} from "framer-motion"
 
 const Contact = () => {
+
+  const handleScroll = (e, targetId) => {
+    e.preventDefault();
+    const offset = 120; // Ajuste conforme necessário
+    const targetElement = document.getElementById(targetId);
+    const elementPosition = targetElement.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
 
     
-    <div className="border-b border-neutral-300">
+    <div id="contact" className="border-b border-neutral-300">
         <motion.h1 
         whileInView={{opacity: 1, y: 0}}
         initial={{opacity: 0, y: -100}}
@@ -38,7 +59,20 @@ const Contact = () => {
             </div>
           </div>
         </motion.div>
-        <p className="flex justify-center pt-24 text-neutral-400 mb-5 text-sm">Copyright &#169; 2024 José Vilaça</p>
+
+         {/* Botão para rolar para o topo da página */}
+      <motion.div 
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 0 }}
+        transition={{ duration: 1.5 }}
+        className="flex justify-center mt-16"
+      >
+        <a href="#hero" onClick={(e) => handleScroll(e, 'hero')} className="text-neutral-500 hover:text-neutral-600 cursor-pointer">
+          <FaArrowUp className="text-2xl" />
+        </a>
+      </motion.div>
+
+        <p className="flex justify-center pt-16 text-neutral-400 mb-5 text-sm">Copyright &#169; 2024 José Vilaça</p>
     </div>
 
     
