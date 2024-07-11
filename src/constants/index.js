@@ -11,9 +11,9 @@ export const HERO_CONTENT = {
 }
 
 export const ABOUT_TEXT = {
-  p1: "I am a dedicated Information Systems Engineering student with a keen interest in front-end development and business intelligence. Throughout my academic journey, I've focused on mastering these areas to create intuitive user interfaces and leverage data for informed decision-making.",
+  p1: "I'm a dedicated Information Systems Engineering student with a keen interest in front-end development and business intelligence. Throughout my academic career, I've focused on mastering these areas to create intuitive user interfaces and use data to make informed decisions.",
 
-  p2: "Outside of my studies, I maintain an active lifestyle with regular running and gym sessions. Spending time with family and friends is also a priority, providing me with relaxation and joy.",
+  p2: "Outside of my studies, I maintain an active lifestyle with regular running and gym sessions. I like to watch series and occasionally play some video games. Last but not least, spending time with family and friends is a top priority, giving me relaxation and joy.",
   
   p3: "I look forward to applying my skills and enthusiasm to contribute effectively in a professional environment where innovation and collaboration thrive.",
 
@@ -42,7 +42,7 @@ export const PROJECTS = [
     image: project1,
     description:
       "Development of a modern, up-to-date website focused on tourism in the city of Braga.",
-    technologies: ["HTML", "CSS", "Bootstrap", "JavaScript", "Vue.js"],
+    technologies: ["HTML", "CSS", "JavaScript", "Vue.js"],
   },
   {
     title: "Mobile Price Prediction System",
@@ -56,14 +56,14 @@ export const PROJECTS = [
     image: project3,
     description:
       "This project consisted of collecting and processing data that could influence the quality of life of squirrels in New York.",
-    technologies: ["Jupyter(PySpark)", " Hadoop(HDFS)", "Tableau"],
+    technologies: ["Jupyter(PySpark)", "Hadoop(HDFS)", "Tableau"],
   },
   {
     title: "Decision Support System for Walmart",
     image: project4,
     description:
       "Advanced forecasting and optimization techniques to improve Walmart's resource management, specifically in relation to product stock and employee allocation.",
-    technologies: ["RStudio", "Python"],
+    technologies: ["RStudio"],
   },
   {
     title: "Softwares in Java",
