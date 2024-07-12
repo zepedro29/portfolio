@@ -5,6 +5,7 @@ import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 import Modal from "./Modal";
 import MPPSProjectInfo from "./MPPSProjectInfo";
+import SNYProjectInfo from "./SNYProjectInfo"; // Importar o novo componente
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -70,6 +71,15 @@ const Projects = () => {
                     View
                   </button>
                 )}
+                {project.title === "Analysis of data on the Quality of Life of Squirrels in New York" && (
+                  <button
+                    className="bg-gray-200 hover:bg-gray-300 text-sm px-2 py-1 rounded text-green-800"
+                    onClick={() => handleViewClick(project.title)}
+                  >
+                    View
+                  </button>
+                )}
+                
               </div>
               <p className="mb-4 text-neutral-400 text-justify">
                 {project.description}
@@ -90,6 +100,9 @@ const Projects = () => {
         <Modal onClose={handleCloseModal}>
           {selectedProject === "Mobile Price Prediction System" && (
             <MPPSProjectInfo />
+          )}
+          {selectedProject === "Analysis of data on the Quality of Life of Squirrels in New York" && (
+            <SNYProjectInfo />
           )}
         </Modal>
       )}

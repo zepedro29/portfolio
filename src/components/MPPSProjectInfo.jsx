@@ -1,7 +1,10 @@
-// MPPSProjectInfo.jsx
 import React from "react";
+import { useState } from "react";
 
 const MPPSProjectInfo = () => {
+
+  const [view, setView] = useState("PowerBI"); // Define o estado inicial para mostrar o PowerBI
+  
   return (
     <div className="p-4">
       <h2 className="text-2xl mb-4 font-medium justify-center flex">Mobile Price Prediction System</h2>
@@ -15,69 +18,88 @@ const MPPSProjectInfo = () => {
       </p>
      
       <div className="overflow-x-auto mt-10">
-  <table className="table-auto text-xs border-collapse border border-gray-400 w-full">
-    <thead>
-      <tr>
-        <th className="border border-gray-300 px-2 py-1 bg-neutral-200">Business Objective</th>
-        <th className="border border-gray-300 px-2 py-1 bg-neutral-200">Critical Success Factor</th>
-        <th className="border border-gray-300 px-2 py-1 bg-neutral-200">Measure</th>
-        <th className="border border-gray-300 px-2 py-1 bg-neutral-200">KPI</th>
-        <th className="border border-gray-300 px-2 py-1 bg-neutral-200">Goals</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td className="border border-gray-300 px-2 py-1 bg-neutral-100 text-center font-medium" rowSpan="4">Increase company profit</td>
-        <td className="border border-gray-300 px-2 py-1">Reduce error in smartphone price determination</td>
-        <td className="border border-gray-300 px-2 py-1">Reduce the percentage error in smartphone price estimation</td>
-        <td className="border border-gray-300 px-2 py-1">Percentage of error per price estimate</td>
-        <td className="border border-gray-300 px-2 py-1">Achieve 100% accuracy in predicting smartphone price range</td>
-      </tr>
-      <tr>
-        <td className="border border-gray-300 px-2 py-1">Analyze the confidence level of the chosen model</td>
-        <td className="border border-gray-300 px-2 py-1">Compare actual and predicted smartphone prices</td>
-        <td className="border border-gray-300 px-2 py-1">Average actual value and predicted value according to the confidence level percentage</td>
-        <td className="border border-gray-300 px-2 py-1"></td>
-      </tr>
-      <tr>
-        <td className="border border-gray-300 px-2 py-1" rowSpan="2">Analyze Purchase Patterns</td>
-        <td className="border border-gray-300 px-2 py-1">Identify monthly smartphone purchase patterns to optimize marketing strategies</td>
-        <td className="border border-gray-300 px-2 py-1">Total number of smartphones sold per month</td>
-        <td className="border border-gray-300 px-2 py-1">Achieve monthly sales &gt;= 25</td>
-      </tr>
-      <tr>
-        <td className="border border-gray-300 px-2 py-1">Identify customer purchase patterns for key smartphone components to optimize marketing strategies</td>
-        <td className="border border-gray-300 px-2 py-1">Average count of the most relevant smartphone components</td>
-        <td className="border border-gray-300 px-2 py-1"></td>
-      </tr>
-      <tr>
-        <td className="border border-gray-300 px-2 py-1 bg-neutral-100 text-center font-medium" rowSpan="1">Improve customer satisfaction</td>
-        <td className="border border-gray-300 px-2 py-1">Value Index of Quality/Price</td>
-        <td className="border border-gray-300 px-2 py-1">Increase customer satisfaction index regarding price/quality compared to competitors</td>
-        <td className="border border-gray-300 px-2 py-1">Total number of satisfactions regarding smartphone price</td>
-        <td className="border border-gray-300 px-2 py-1">Achieve a monthly index &gt;= 1.62</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+          <table className="table-auto text-xs border-collapse border border-gray-400 w-full">
+            <thead>
+              <tr>
+                <th className="border border-gray-300 px-2 py-1 bg-blue-200">Business Objective</th>
+                <th className="border border-gray-300 px-2 py-1 bg-blue-200">Critical Success Factor</th>
+                <th className="border border-gray-300 px-2 py-1 bg-blue-200">Measure</th>
+                <th className="border border-gray-300 px-2 py-1 bg-blue-200">KPI</th>
+                <th className="border border-gray-300 px-2 py-1 bg-blue-200">Goals</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-300 px-2 py-1 bg-blue-100 text-center font-medium" rowSpan="4">Increase company profit</td>
+                <td className="border border-gray-300 px-2 py-1">Reduce error in smartphone price determination</td>
+                <td className="border border-gray-300 px-2 py-1">Reduce the percentage error in smartphone price estimation</td>
+                <td className="border border-gray-300 px-2 py-1">Percentage of error per price estimate</td>
+                <td className="border border-gray-300 px-2 py-1">Achieve 100% accuracy in predicting smartphone price range</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 px-2 py-1">Analyze the confidence level of the chosen model</td>
+                <td className="border border-gray-300 px-2 py-1">Compare actual and predicted smartphone prices</td>
+                <td className="border border-gray-300 px-2 py-1">Average actual value and predicted value according to the confidence level percentage</td>
+                <td className="border border-gray-300 px-2 py-1"></td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 px-2 py-1" rowSpan="2">Analyze Purchase Patterns</td>
+                <td className="border border-gray-300 px-2 py-1">Identify monthly smartphone purchase patterns to optimize marketing strategies</td>
+                <td className="border border-gray-300 px-2 py-1">Total number of smartphones sold per month</td>
+                <td className="border border-gray-300 px-2 py-1">Achieve monthly sales &gt;= 25</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 px-2 py-1">Identify customer purchase patterns for key smartphone components to optimize marketing strategies</td>
+                <td className="border border-gray-300 px-2 py-1">Average count of the most relevant smartphone components</td>
+                <td className="border border-gray-300 px-2 py-1"></td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 px-2 py-1 bg-blue-100 text-center font-medium" rowSpan="1">Improve customer satisfaction</td>
+                <td className="border border-gray-300 px-2 py-1">Value Index of Quality/Price</td>
+                <td className="border border-gray-300 px-2 py-1">Increase customer satisfaction index regarding price/quality compared to competitors</td>
+                <td className="border border-gray-300 px-2 py-1">Total number of satisfactions regarding smartphone price</td>
+                <td className="border border-gray-300 px-2 py-1">Achieve a monthly index &gt;= 1.62</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
 
+    <h3 className="text-2xl mt-10 font-medium justify-center flex">Final DashBoard</h3>
 
-      <h3 className="text-2xl mt-10 font-medium justify-center flex">Final DashBoard</h3>
+    <div className="flex justify-center space-x-4 mt-4">
+    <button
+          onClick={() => setView("PowerBI")}
+          className={`bg-white border-b-2 text-neutral-800 text-sm font-medium py-2 px-4 ${view === "PowerBI" ? "border-neutral-500" : "border-transparent"} hover:border-neutral-500`}
+        >
+          PowerBI
+        </button>
+        <button
+          onClick={() => setView("StaticImage")}
+          className={`bg-white border-b-2 text-neutral-800 text-sm font-medium py-2 px-4 ${view === "StaticImage" ? "border-neutral-500" : "border-transparent"} hover:border-neutral-500`}
+        >
+          Static 
+        </button>
+      </div>
+
+    <div className="flex mt-4 overflow-x-auto">
+      {view === "PowerBI" ? (
+        <iframe 
+          title="aase1" 
+          width="1140" 
+          height="541.25" 
+          src="https://app.powerbi.com/reportEmbed?reportId=9085aacc-45c6-49cb-9361-43423bb68462&autoAuth=true&ctid=d05d4c80-da1e-4cd7-83a6-0d2094b20418" 
+          frameBorder="0" 
+          allowFullScreen="true">
+        </iframe>
+      ) : (
+        <img src="/DashboardAASE.png" alt="Dashboard" className="w-full h-auto rounded shadow-lg" />
+      )}
+    </div>
+
+    <p className="text-xs text-neutral-600 mt-2 flex justify-center text-justify">
+      Because I don't have PowerBI Pro License, only people from my organization @Uminho have access to the PowerBI Dashboard 
+    </p>
       
-        <div className="flex mt-2 overflow-x-auto">
-            <iframe 
-                title="aase1" 
-                width="1140" 
-                height="541.25" 
-                src="https://app.powerbi.com/reportEmbed?reportId=9085aacc-45c6-49cb-9361-43423bb68462&autoAuth=true&ctid=d05d4c80-da1e-4cd7-83a6-0d2094b20418" 
-                frameborder="0" 
-                allowFullScreen="true">
-            </iframe>
-        </div>
-
-        <p className="text-xs text-neutral-600 mt-2 flex justify-center">Only people from my organization @Uminho have access because I don't have PowerBI Pro License.</p>
-
-      {/* Additional project-specific content such as API implementation, Iframes, etc. */}
     </div>
   );
 };
