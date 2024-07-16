@@ -11,7 +11,7 @@ const DSSWProjectInfo = () => {
         This project focused on creating a decision support system for Walmart, aimed at improving resource management, specifically product inventory and employee allocation.
         </p>
 
-        <h2 className="text-lg mt-4 font-semibold">Objectives and Methodology</h2>
+        <h2 className="text-base lg:text-lg mt-4 font-semibold lg:font-bold">Objectives and Methodology</h2>
 
         <p className="text-justify text-xs lg:text-base">
         The project was divided into two main phases: weekly sales forecasting and resource management optimization.
@@ -20,7 +20,7 @@ const DSSWProjectInfo = () => {
          resource management decisions.
         </p>
 
-        <h2 className="text-lg mt-4 font-semibold">Models Used</h2>
+        <h2 className="text-base lg:text-lg mt-4 font-semibold lg:font-bold">Models Used</h2>
 
         <p className="text-justify text-xs lg:text-base">
         For the <strong>forecasting phase</strong>, we employed a growing window method with 10 iterations and a 4-week window. 
@@ -30,7 +30,7 @@ const DSSWProjectInfo = () => {
         goal of maximizing profit and minimizing operational costs.
         </p>
 
-        <h2 className="text-lg mt-4 font-semibold">Results</h2>
+        <h2 className="text-base lg:text-lg mt-4 font-semibold lg:font-bold">Results</h2>
         
         <p className="text-justify text-xs lg:text-base">
         The results demonstrated that integrating forecasting and optimization techniques can significantly enhance operational efficiency 
