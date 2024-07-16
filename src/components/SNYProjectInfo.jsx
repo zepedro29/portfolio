@@ -35,27 +35,8 @@ const SNYProjectInfo = () => {
     <div className="p-4">
       <h2 className="text-2xl mb-4 font-medium justify-center flex">Analysis of data on the Quality of Life of Squirrels in New York</h2>
       
-      <div className="relative flex justify-center items-center">
-        <FaArrowAltCircleLeft className="absolute left-1 lg:left-8 text-2xl lg:text-3xl text-neutral-400 lg:text-neutral-800 cursor-pointer" onClick={prevSlide} />
-        {images.map((image, index) => (
-          <div
-            className={index === current ? 'opacity-100 transition duration-1000' : 'opacity-0'}
-            key={index}
-          >
-            {index === current && (
-              <img 
-                src={image} 
-                alt="dashboard image" 
-                className="w-full max-w-screen-sm h-auto rounded-2xl shadow-xl" 
-              />
-            )}
-          </div>
-        ))}
-        <FaArrowAltCircleRight className="absolute right-1 lg:right-8 text-2xl lg:text-3xl text-neutral-400 lg:text-neutral-800 cursor-pointer" onClick={nextSlide} />
-      </div>   
-
-    <div>
-        <p className="mt-14 text-justify text-xs lg:text-base">
+      <div>
+        <p className="text-justify text-xs lg:text-base">
             The study focuses on New York City, investigating the quality of life of squirrels, the condition of trees and the quality of drinking fountains in parks.
             <br />
             Specific objectives include:
@@ -83,10 +64,22 @@ const SNYProjectInfo = () => {
         
         </p>
 
-    </div>
+      </div>
 
-    
-      
+      <h3 className="text-2xl mt-10 font-medium justify-center flex">DashBoards</h3>
+
+      <div className="mt-4 relative flex justify-center items-center">
+        <FaArrowAltCircleLeft className="absolute left-1 lg:left-8 text-2xl lg:text-3xl text-neutral-400 lg:text-neutral-800 cursor-pointer" onClick={prevSlide} />
+        <div className="w-full max-w-screen-sm h-auto rounded-2xl shadow-lg">
+          <img
+            src={images[current]}
+            alt="dashboard image"
+            className="w-full h-auto rounded-2xl"
+          />
+        </div>
+        <FaArrowAltCircleRight className="absolute right-1 lg:right-8 text-2xl lg:text-3xl text-neutral-400 lg:text-neutral-800 cursor-pointer" onClick={nextSlide} />
+      </div> 
+
     </div>
   );
 };

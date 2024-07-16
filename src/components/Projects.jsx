@@ -5,7 +5,8 @@ import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 import Modal from "./Modal";
 import MPPSProjectInfo from "./MPPSProjectInfo";
-import SNYProjectInfo from "./SNYProjectInfo"; // Importar o novo componente
+import SNYProjectInfo from "./SNYProjectInfo";
+import DSSWProjectInfo from "./DSSWProjectInfo";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -79,6 +80,14 @@ const Projects = () => {
                     View
                   </button>
                 )}
+                {project.title === "Decision Support System for Walmart" && (
+                  <button
+                    className="bg-gray-200 hover:bg-gray-300 text-sm px-2 py-1 rounded text-green-800"
+                    onClick={() => handleViewClick(project.title)}
+                  >
+                    View
+                  </button>
+                )}
                 
               </div>
               <p className="mb-4 text-neutral-400 text-justify">
@@ -104,6 +113,11 @@ const Projects = () => {
           {selectedProject === "Analysis of data on the Quality of Life of Squirrels in New York" && (
             <SNYProjectInfo />
           )}
+          {selectedProject === "Decision Support System for Walmart" && (
+            <DSSWProjectInfo />
+          )}
+          
+
         </Modal>
       )}
     </div>
