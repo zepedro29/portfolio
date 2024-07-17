@@ -4,9 +4,9 @@ import { SiTableau, SiPowerbi, SiPython, SiApacheflink } from "react-icons/si"
 import {motion} from "framer-motion"
 
 const iconVariants = (duration) => ({
-    initial: {y: -4},
+    initial: {y: -0},
     animate: {
-        y: [4, -4],
+        y: [0, -0],
         transition: {
             duration: duration,
             ease: "linear",
