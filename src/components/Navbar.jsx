@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaLinkedin, FaGithub, FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -19,15 +20,31 @@ const Navbar = () => {
       top: offsetPosition,
       behavior: "smooth"
     });
-    
+
     // Fecha o menu após a navegação
     if (menuOpen) {
       setMenuOpen(false);
     }
   };
 
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', onScroll);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
   return (
-    <nav className="fixed top-4 left-0 right-0 mx-auto w-auto max-w-3xl bg-neutral-100 bg-opacity-60 shadow-md rounded-full py-2 sm:py-4 px-4 sm:px-8 flex items-center justify-between z-50">
+    <nav className={`fixed top-4 left-4 right-4 mx-auto w-auto max-w-3xl ${isScrolled ? 'bg-opacity-60 backdrop-blur-md' : 'bg-opacity-60'} bg-neutral-100 shadow-md rounded-full py-2 sm:py-4 px-4 sm:px-8 flex items-center justify-between z-50 transition-all duration-300`}>
       <div className="flex items-center mr-4">
         <a href="/CVJoseVilaca.pdf" download className="p-2 bg-neutral-600 text-white rounded-full hover:bg-neutral-700 text-sm">
           Download CV
@@ -49,7 +66,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className="sm:hidden flex items-center">
-        <button onClick={toggleMenu} className="text-2xl focus:outline-none">
+        <button onClick={toggleMenu} className="text-2xl focus:outline-none text-neutral-600 hover:text-neutral-900">
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
@@ -64,7 +81,6 @@ const Navbar = () => {
       )}
     </nav>
   );
-}
+};
 
 export default Navbar;
-

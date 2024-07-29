@@ -1,6 +1,6 @@
-import { RiReactjsLine } from "react-icons/ri"
+//import { RiReactjsLine } from "react-icons/ri"
 import { RiHtml5Fill, RiCss3Fill, RiVuejsFill, RiJavascriptFill, RiDatabase2Fill } from "react-icons/ri"
-import { SiTableau, SiPowerbi, SiPython, SiApacheflink } from "react-icons/si"
+import { SiTableau, SiPowerbi, SiPython, /*SiApacheflink*/ } from "react-icons/si"
 import {motion} from "framer-motion"
 
 const iconVariants = (duration) => ({
