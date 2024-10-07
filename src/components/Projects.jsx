@@ -1,6 +1,6 @@
 // projects.jsx
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 import Modal from "./Modal";

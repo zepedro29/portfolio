@@ -5,17 +5,17 @@ import project4 from "../assets/projects/walmart.jpg";
 import project5 from "../assets/projects/java.jpg";
 
 export const HERO_CONTENT = {
-  p1: "I am a first-year Master's student in Information Systems Engineering. Throughout my academic career, I have focused on Data Engineering and Software Development.",
+  p1: "I am a final-year Master's student in Information Systems Engineering. Throughout my academic career, I have focused on Data Engineering and Software Development.",
 
   p2: "I am eager to join a company where I can continue to grow professionally, contribute my skills, and acquire new abilities that will help me advance in my career.",
 }
 
 export const ABOUT_TEXT = {
-  p1: "I'm a dedicated Information Systems Engineering student with a keen interest in front-end development and business intelligence. Throughout my academic career, I've focused on mastering these areas to create intuitive user interfaces and use data to make informed decisions.",
+  p1: "I'm a dedicated Information Systems Engineering student with a keen interest in front-end development and business intelligence. Throughout my academic career, I've focused on mastering these areas to create intuitive user interfaces and use data to make informed decisions. Outside of my studies, I maintain an active lifestyle with regular running and gym sessions. I like to watch series and TV Sports. Last but not least, spending time with family and friends is a top priority, giving me relaxation and joy. I look forward to applying my skills and enthusiasm to contribute effectively in a professional environment where innovation and collaboration thrive.",
 
-  p2: "Outside of my studies, I maintain an active lifestyle with regular running and gym sessions. I like to watch series and occasionally play some video games. Last but not least, spending time with family and friends is a top priority, giving me relaxation and joy.",
+  p2: "",
   
-  p3: "I look forward to applying my skills and enthusiasm to contribute effectively in a professional environment where innovation and collaboration thrive.",
+  p3: "",
 
   }
 
@@ -24,7 +24,7 @@ export const EXPERIENCES = [
     year: "2023 - Present",
     role: "University of Minho",
     company: "",
-    description: `Transitioning to the second year of my Master’s Degree.`,
+    description: `Last year of my Master’s Degree.`,
     
   },
   {
